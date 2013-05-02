@@ -3,7 +3,7 @@ import Keys._
 
 object MinimalBuild extends Build {
   
-  lazy val buildVersion =  "2.1.0"
+  lazy val buildVersion =  "2.1.1"
   
   lazy val typesafeSnapshot = "Typesafe Snapshots Repository" at "http://repo.typesafe.com/typesafe/snapshots/"
   lazy val typesafe = "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
@@ -11,7 +11,7 @@ object MinimalBuild extends Build {
   lazy val pk11 = "pk11 repo" at "http://pk11-scratch.googlecode.com/svn/trunk"
   lazy val root = Project(id = "play-plugins-redis", base = file("."), settings = Project.defaultSettings).settings(
     version := "2.1.0~baloo",
-    scalaVersion := "2.10.0",
+    scalaVersion := "2.10.1",
     publishTo <<= (version) { version: String =>
                 val nexus = "http://typesafe.artifactoryonline.com/typesafe/"
                 if (version.trim.endsWith("SNAPSHOT")) Some("snapshots" at nexus + "maven-snapshots/") 
